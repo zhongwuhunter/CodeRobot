@@ -37,6 +37,7 @@
             NSString *key = [originalLine substringWithRange:targetRange];
             NSString *targetString = [[CRTemplateManager sharedInstance].editTemplate valueForKey:key];
             if (targetString.length > 0) {
+                lines[startLine] = [originalLine stringByReplacingOccurrencesOfString:key withString:targetString options:NSBackwardsSearch range:targetRange];
                 NSLog(@"%@", targetString);
                 break;
             }

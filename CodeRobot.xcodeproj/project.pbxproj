@@ -1,0 +1,761 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19124E6E21ACE374001021E3 /* NSString+Categories+CR.m in Sources */ = {isa = PBXBuildFile; fileRef = 19124E6D21ACE374001021E3 /* NSString+Categories+CR.m */; };
+		196D5E4121AD271300035B98 /* CRTemplateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 196D5E4021AD271300035B98 /* CRTemplateManager.m */; };
+		19D3025621ABF37C004B0154 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D3025521ABF37C004B0154 /* AppDelegate.m */; };
+		19D3025921ABF37C004B0154 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D3025821ABF37C004B0154 /* ViewController.m */; };
+		19D3025B21ABF37C004B0154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19D3025A21ABF37C004B0154 /* Assets.xcassets */; };
+		19D3025E21ABF37C004B0154 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19D3025C21ABF37C004B0154 /* Main.storyboard */; };
+		19D3026121ABF37C004B0154 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D3026021ABF37C004B0154 /* main.m */; };
+		19D3026C21ABF37C004B0154 /* CodeRobotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D3026B21ABF37C004B0154 /* CodeRobotTests.m */; };
+		19D3027721ABF37C004B0154 /* CodeRobotUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D3027621ABF37C004B0154 /* CodeRobotUITests.m */; };
+		19D3028B21ABF3BB004B0154 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D3028A21ABF3BB004B0154 /* Cocoa.framework */; };
+		19D3028F21ABF3BB004B0154 /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D3028E21ABF3BB004B0154 /* SourceEditorExtension.m */; };
+		19D3029221ABF3BB004B0154 /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D3029121ABF3BB004B0154 /* SourceEditorCommand.m */; };
+		19D3029721ABF3BB004B0154 /* CR.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 19D3028821ABF3BB004B0154 /* CR.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		19D3029F21ABF473004B0154 /* CRLazyload.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D3029E21ABF473004B0154 /* CRLazyload.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19D3026821ABF37C004B0154 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19D3024921ABF37B004B0154 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19D3025021ABF37C004B0154;
+			remoteInfo = CodeRobot;
+		};
+		19D3027321ABF37C004B0154 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19D3024921ABF37B004B0154 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19D3025021ABF37C004B0154;
+			remoteInfo = CodeRobot;
+		};
+		19D3029521ABF3BB004B0154 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19D3024921ABF37B004B0154 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19D3028721ABF3BB004B0154;
+			remoteInfo = CR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		19D3029B21ABF3BB004B0154 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				19D3029721ABF3BB004B0154 /* CR.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		19124E6C21ACE374001021E3 /* NSString+Categories+CR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Categories+CR.h"; sourceTree = "<group>"; };
+		19124E6D21ACE374001021E3 /* NSString+Categories+CR.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Categories+CR.m"; sourceTree = "<group>"; };
+		196D5E3C21AD256D00035B98 /* CRTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRTemplate.h; sourceTree = "<group>"; };
+		196D5E3F21AD271300035B98 /* CRTemplateManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRTemplateManager.h; sourceTree = "<group>"; };
+		196D5E4021AD271300035B98 /* CRTemplateManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRTemplateManager.m; sourceTree = "<group>"; };
+		19D3025121ABF37C004B0154 /* CodeRobot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeRobot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19D3025421ABF37C004B0154 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		19D3025521ABF37C004B0154 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		19D3025721ABF37C004B0154 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		19D3025821ABF37C004B0154 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		19D3025A21ABF37C004B0154 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19D3025D21ABF37C004B0154 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19D3025F21ABF37C004B0154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19D3026021ABF37C004B0154 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		19D3026221ABF37C004B0154 /* CodeRobot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodeRobot.entitlements; sourceTree = "<group>"; };
+		19D3026721ABF37C004B0154 /* CodeRobotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeRobotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19D3026B21ABF37C004B0154 /* CodeRobotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeRobotTests.m; sourceTree = "<group>"; };
+		19D3026D21ABF37C004B0154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19D3027221ABF37C004B0154 /* CodeRobotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeRobotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19D3027621ABF37C004B0154 /* CodeRobotUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeRobotUITests.m; sourceTree = "<group>"; };
+		19D3027821ABF37C004B0154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19D3028821ABF3BB004B0154 /* CR.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CR.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		19D3028A21ABF3BB004B0154 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		19D3028D21ABF3BB004B0154 /* SourceEditorExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorExtension.h; sourceTree = "<group>"; };
+		19D3028E21ABF3BB004B0154 /* SourceEditorExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorExtension.m; sourceTree = "<group>"; };
+		19D3029021ABF3BB004B0154 /* SourceEditorCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorCommand.h; sourceTree = "<group>"; };
+		19D3029121ABF3BB004B0154 /* SourceEditorCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorCommand.m; sourceTree = "<group>"; };
+		19D3029321ABF3BB004B0154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19D3029421ABF3BB004B0154 /* CR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CR.entitlements; sourceTree = "<group>"; };
+		19D3029D21ABF473004B0154 /* CRLazyload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRLazyload.h; sourceTree = "<group>"; };
+		19D3029E21ABF473004B0154 /* CRLazyload.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRLazyload.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19D3024E21ABF37C004B0154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19D3026421ABF37C004B0154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19D3026F21ABF37C004B0154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19D3028521ABF3BB004B0154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19D3028B21ABF3BB004B0154 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19D3024821ABF37B004B0154 = {
+			isa = PBXGroup;
+			children = (
+				19D3025321ABF37C004B0154 /* CodeRobot */,
+				19D3026A21ABF37C004B0154 /* CodeRobotTests */,
+				19D3027521ABF37C004B0154 /* CodeRobotUITests */,
+				19D3028C21ABF3BB004B0154 /* CR */,
+				19D3028921ABF3BB004B0154 /* Frameworks */,
+				19D3025221ABF37C004B0154 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19D3025221ABF37C004B0154 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19D3025121ABF37C004B0154 /* CodeRobot.app */,
+				19D3026721ABF37C004B0154 /* CodeRobotTests.xctest */,
+				19D3027221ABF37C004B0154 /* CodeRobotUITests.xctest */,
+				19D3028821ABF3BB004B0154 /* CR.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19D3025321ABF37C004B0154 /* CodeRobot */ = {
+			isa = PBXGroup;
+			children = (
+				19D3025421ABF37C004B0154 /* AppDelegate.h */,
+				19D3025521ABF37C004B0154 /* AppDelegate.m */,
+				19D3025721ABF37C004B0154 /* ViewController.h */,
+				19D3025821ABF37C004B0154 /* ViewController.m */,
+				19D3025A21ABF37C004B0154 /* Assets.xcassets */,
+				19D3025C21ABF37C004B0154 /* Main.storyboard */,
+				19D3025F21ABF37C004B0154 /* Info.plist */,
+				19D3026021ABF37C004B0154 /* main.m */,
+				19D3026221ABF37C004B0154 /* CodeRobot.entitlements */,
+			);
+			path = CodeRobot;
+			sourceTree = "<group>";
+		};
+		19D3026A21ABF37C004B0154 /* CodeRobotTests */ = {
+			isa = PBXGroup;
+			children = (
+				19D3026B21ABF37C004B0154 /* CodeRobotTests.m */,
+				19D3026D21ABF37C004B0154 /* Info.plist */,
+			);
+			path = CodeRobotTests;
+			sourceTree = "<group>";
+		};
+		19D3027521ABF37C004B0154 /* CodeRobotUITests */ = {
+			isa = PBXGroup;
+			children = (
+				19D3027621ABF37C004B0154 /* CodeRobotUITests.m */,
+				19D3027821ABF37C004B0154 /* Info.plist */,
+			);
+			path = CodeRobotUITests;
+			sourceTree = "<group>";
+		};
+		19D3028921ABF3BB004B0154 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19D3028A21ABF3BB004B0154 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19D3028C21ABF3BB004B0154 /* CR */ = {
+			isa = PBXGroup;
+			children = (
+				19D3029C21ABF42B004B0154 /* Lazyload */,
+				19D3028D21ABF3BB004B0154 /* SourceEditorExtension.h */,
+				19D3028E21ABF3BB004B0154 /* SourceEditorExtension.m */,
+				19D3029021ABF3BB004B0154 /* SourceEditorCommand.h */,
+				19D3029121ABF3BB004B0154 /* SourceEditorCommand.m */,
+				19D3029321ABF3BB004B0154 /* Info.plist */,
+				19D3029421ABF3BB004B0154 /* CR.entitlements */,
+			);
+			path = CR;
+			sourceTree = "<group>";
+		};
+		19D3029C21ABF42B004B0154 /* Lazyload */ = {
+			isa = PBXGroup;
+			children = (
+				19D3029D21ABF473004B0154 /* CRLazyload.h */,
+				19D3029E21ABF473004B0154 /* CRLazyload.m */,
+				19124E6C21ACE374001021E3 /* NSString+Categories+CR.h */,
+				19124E6D21ACE374001021E3 /* NSString+Categories+CR.m */,
+				196D5E3C21AD256D00035B98 /* CRTemplate.h */,
+				196D5E3F21AD271300035B98 /* CRTemplateManager.h */,
+				196D5E4021AD271300035B98 /* CRTemplateManager.m */,
+			);
+			path = Lazyload;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19D3025021ABF37C004B0154 /* CodeRobot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19D3027B21ABF37C004B0154 /* Build configuration list for PBXNativeTarget "CodeRobot" */;
+			buildPhases = (
+				19D3024D21ABF37C004B0154 /* Sources */,
+				19D3024E21ABF37C004B0154 /* Frameworks */,
+				19D3024F21ABF37C004B0154 /* Resources */,
+				19D3029B21ABF3BB004B0154 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19D3029621ABF3BB004B0154 /* PBXTargetDependency */,
+			);
+			name = CodeRobot;
+			productName = CodeRobot;
+			productReference = 19D3025121ABF37C004B0154 /* CodeRobot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		19D3026621ABF37C004B0154 /* CodeRobotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19D3027E21ABF37C004B0154 /* Build configuration list for PBXNativeTarget "CodeRobotTests" */;
+			buildPhases = (
+				19D3026321ABF37C004B0154 /* Sources */,
+				19D3026421ABF37C004B0154 /* Frameworks */,
+				19D3026521ABF37C004B0154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19D3026921ABF37C004B0154 /* PBXTargetDependency */,
+			);
+			name = CodeRobotTests;
+			productName = CodeRobotTests;
+			productReference = 19D3026721ABF37C004B0154 /* CodeRobotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		19D3027121ABF37C004B0154 /* CodeRobotUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19D3028121ABF37C004B0154 /* Build configuration list for PBXNativeTarget "CodeRobotUITests" */;
+			buildPhases = (
+				19D3026E21ABF37C004B0154 /* Sources */,
+				19D3026F21ABF37C004B0154 /* Frameworks */,
+				19D3027021ABF37C004B0154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19D3027421ABF37C004B0154 /* PBXTargetDependency */,
+			);
+			name = CodeRobotUITests;
+			productName = CodeRobotUITests;
+			productReference = 19D3027221ABF37C004B0154 /* CodeRobotUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		19D3028721ABF3BB004B0154 /* CR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19D3029821ABF3BB004B0154 /* Build configuration list for PBXNativeTarget "CR" */;
+			buildPhases = (
+				19D3028421ABF3BB004B0154 /* Sources */,
+				19D3028521ABF3BB004B0154 /* Frameworks */,
+				19D3028621ABF3BB004B0154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CR;
+			productName = CR;
+			productReference = 19D3028821ABF3BB004B0154 /* CR.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19D3024921ABF37B004B0154 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = tiger;
+				TargetAttributes = {
+					19D3025021ABF37C004B0154 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					19D3026621ABF37C004B0154 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 19D3025021ABF37C004B0154;
+					};
+					19D3027121ABF37C004B0154 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 19D3025021ABF37C004B0154;
+					};
+					19D3028721ABF3BB004B0154 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 19D3024C21ABF37B004B0154 /* Build configuration list for PBXProject "CodeRobot" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19D3024821ABF37B004B0154;
+			productRefGroup = 19D3025221ABF37C004B0154 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19D3025021ABF37C004B0154 /* CodeRobot */,
+				19D3026621ABF37C004B0154 /* CodeRobotTests */,
+				19D3027121ABF37C004B0154 /* CodeRobotUITests */,
+				19D3028721ABF3BB004B0154 /* CR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19D3024F21ABF37C004B0154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19D3025B21ABF37C004B0154 /* Assets.xcassets in Resources */,
+				19D3025E21ABF37C004B0154 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19D3026521ABF37C004B0154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19D3027021ABF37C004B0154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19D3028621ABF3BB004B0154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19D3024D21ABF37C004B0154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19D3025921ABF37C004B0154 /* ViewController.m in Sources */,
+				19D3026121ABF37C004B0154 /* main.m in Sources */,
+				19D3025621ABF37C004B0154 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19D3026321ABF37C004B0154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19D3026C21ABF37C004B0154 /* CodeRobotTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19D3026E21ABF37C004B0154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19D3027721ABF37C004B0154 /* CodeRobotUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19D3028421ABF3BB004B0154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19124E6E21ACE374001021E3 /* NSString+Categories+CR.m in Sources */,
+				19D3028F21ABF3BB004B0154 /* SourceEditorExtension.m in Sources */,
+				19D3029221ABF3BB004B0154 /* SourceEditorCommand.m in Sources */,
+				19D3029F21ABF473004B0154 /* CRLazyload.m in Sources */,
+				196D5E4121AD271300035B98 /* CRTemplateManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19D3026921ABF37C004B0154 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19D3025021ABF37C004B0154 /* CodeRobot */;
+			targetProxy = 19D3026821ABF37C004B0154 /* PBXContainerItemProxy */;
+		};
+		19D3027421ABF37C004B0154 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19D3025021ABF37C004B0154 /* CodeRobot */;
+			targetProxy = 19D3027321ABF37C004B0154 /* PBXContainerItemProxy */;
+		};
+		19D3029621ABF3BB004B0154 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19D3028721ABF3BB004B0154 /* CR */;
+			targetProxy = 19D3029521ABF3BB004B0154 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		19D3025C21ABF37C004B0154 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19D3025D21ABF37C004B0154 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19D3027921ABF37C004B0154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		19D3027A21ABF37C004B0154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		19D3027C21ABF37C004B0154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CodeRobot/CodeRobot.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = H6LHP2GZ52;
+				INFOPLIST_FILE = CodeRobot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.macdev.CodeRobot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		19D3027D21ABF37C004B0154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CodeRobot/CodeRobot.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = H6LHP2GZ52;
+				INFOPLIST_FILE = CodeRobot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.macdev.CodeRobot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+		19D3027F21ABF37C004B0154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CodeRobotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.macdev.CodeRobotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeRobot.app/Contents/MacOS/CodeRobot";
+			};
+			name = Debug;
+		};
+		19D3028021ABF37C004B0154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CodeRobotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.macdev.CodeRobotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeRobot.app/Contents/MacOS/CodeRobot";
+			};
+			name = Release;
+		};
+		19D3028221ABF37C004B0154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CodeRobotUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.macdev.CodeRobotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CodeRobot;
+			};
+			name = Debug;
+		};
+		19D3028321ABF37C004B0154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CodeRobotUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.macdev.CodeRobotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CodeRobot;
+			};
+			name = Release;
+		};
+		19D3029921ABF3BB004B0154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CR/CR.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = H6LHP2GZ52;
+				INFOPLIST_FILE = CR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.macdev.CodeRobot.CR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		19D3029A21ABF3BB004B0154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CR/CR.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = H6LHP2GZ52;
+				INFOPLIST_FILE = CR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.macdev.CodeRobot.CR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19D3024C21ABF37B004B0154 /* Build configuration list for PBXProject "CodeRobot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19D3027921ABF37C004B0154 /* Debug */,
+				19D3027A21ABF37C004B0154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19D3027B21ABF37C004B0154 /* Build configuration list for PBXNativeTarget "CodeRobot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19D3027C21ABF37C004B0154 /* Debug */,
+				19D3027D21ABF37C004B0154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19D3027E21ABF37C004B0154 /* Build configuration list for PBXNativeTarget "CodeRobotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19D3027F21ABF37C004B0154 /* Debug */,
+				19D3028021ABF37C004B0154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19D3028121ABF37C004B0154 /* Build configuration list for PBXNativeTarget "CodeRobotUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19D3028221ABF37C004B0154 /* Debug */,
+				19D3028321ABF37C004B0154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19D3029821ABF3BB004B0154 /* Build configuration list for PBXNativeTarget "CR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19D3029921ABF3BB004B0154 /* Debug */,
+				19D3029A21ABF3BB004B0154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19D3024921ABF37B004B0154 /* Project object */;
+}

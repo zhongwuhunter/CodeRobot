@@ -78,10 +78,29 @@
 }\n"
 
 
+#define CROC_Template_UITextField @"\
+- (UITextField *)propertyName{\n\
+    if (!_propertyName) {\n\
+        UITextField *atextField = [UITextField new];\n\
+        atextField.font = [UIFont nm_FontOfSize:<#(CGFloat)#>];\n\
+        atextField.borderStyle = UITextBorderStyleNone;\n\
+        atextField.keyboardType = UIKeyboardTypeDefault;\n\
+        atextField.backgroundColor = [UIColor clearColor];\n\
+        atextField.textColor = [UIColor nm_colorFromRGB:<#(long)#>];\n\
+        atextField.tintColor = [UIColor nm_colorFromRGB:<#(long)#>];\n\
+        _propertyName = atextField;\n\
+    }\n\
+    return _propertyName;\n\
+}\n"
 
 
-
-
+#define CROC_Template_Other @"\
+- (UIView *)propertyName{\n\
+    if (!_propertyName) {\n\
+        _propertyName = [className new];\n\
+    }\n\
+    return _propertyName;\n\
+}\n"
 
 
 

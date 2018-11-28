@@ -23,9 +23,13 @@
         tmplString = CROC_Template_UIButton;
     }else if ( [@"UITableView" isEqualToString:className] ) {
         tmplString = CROC_Template_UITableView;
+    }else if ( [@"UITextField" isEqualToString:className] ) {
+        tmplString = CROC_Template_UITextField;
+    }else{
+        tmplString = CROC_Template_Other;
     }
     tmplString = [tmplString stringByReplacingOccurrencesOfString:@"propertyName" withString:propertyName];
-    
+    tmplString = [tmplString stringByReplacingOccurrencesOfString:@"className" withString:className];
     return tmplString;
 }
 

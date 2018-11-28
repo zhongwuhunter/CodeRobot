@@ -12,8 +12,8 @@
 
 @interface CRTemplateManager : NSObject
 
-@property (nonatomic, copy) NSMutableDictionary      *editTemplate;
-@property (nonatomic, copy) NSMutableDictionary      *mappingTemplate;
+@property (nonatomic, strong) NSMutableDictionary      *editTemplate;
+@property (nonatomic, strong) NSMutableDictionary      *mappingTemplate;
 
 
 + (instancetype)sharedInstance;

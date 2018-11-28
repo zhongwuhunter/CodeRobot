@@ -34,14 +34,12 @@
     while (matchLength >= 1) {
         if ( endColumn-matchLength >= 0 ) {
             NSRange targetRange = NSMakeRange(endColumn-matchLength, matchLength);
-//            NSString *key = [originalLine substringWithRange:targetRange];
-            NSString *key = @"aok";
+            NSString *key = [originalLine substringWithRange:targetRange];
             NSString *targetString = [[CRTemplateManager sharedInstance].editTemplate valueForKey:key];
-//            if (targetString.length > 0) {
-//                NSLog(@"%@", targetString);
-//                break;
-//            }
-            NSLog(@"%@", key);
+            if (targetString.length > 0) {
+                NSLog(@"%@", targetString);
+                break;
+            }
         }
         matchLength --;
     }

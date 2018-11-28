@@ -39,9 +39,7 @@
 
 - (void)initEditTemplate{
     self.editTemplate = [NSMutableDictionary new];
-    NSString *str1 = CROC_Edit_BUN;
-    NSString *str2 = CROC_Edit_BUN_Value;
-    [self.editTemplate setValue:str2 forKey:str1];
+    [self.editTemplate setValue:CROC_Edit_BUN_Value forKey:CROC_Edit_BUN];
     
 }
 

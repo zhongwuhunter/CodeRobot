@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		19124E6E21ACE374001021E3 /* NSString+Categories+CR.m in Sources */ = {isa = PBXBuildFile; fileRef = 19124E6D21ACE374001021E3 /* NSString+Categories+CR.m */; };
 		196D5E4121AD271300035B98 /* CRTemplateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 196D5E4021AD271300035B98 /* CRTemplateManager.m */; };
+		19AD230C21AE941300D5C8B6 /* CRCodeEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 19AD230B21AE941300D5C8B6 /* CRCodeEditor.m */; };
 		19D3025621ABF37C004B0154 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D3025521ABF37C004B0154 /* AppDelegate.m */; };
 		19D3025921ABF37C004B0154 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D3025821ABF37C004B0154 /* ViewController.m */; };
 		19D3025B21ABF37C004B0154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19D3025A21ABF37C004B0154 /* Assets.xcassets */; };
@@ -67,6 +68,8 @@
 		196D5E3C21AD256D00035B98 /* CRTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRTemplate.h; sourceTree = "<group>"; };
 		196D5E3F21AD271300035B98 /* CRTemplateManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRTemplateManager.h; sourceTree = "<group>"; };
 		196D5E4021AD271300035B98 /* CRTemplateManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRTemplateManager.m; sourceTree = "<group>"; };
+		19AD230A21AE941300D5C8B6 /* CRCodeEditor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRCodeEditor.h; sourceTree = "<group>"; };
+		19AD230B21AE941300D5C8B6 /* CRCodeEditor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRCodeEditor.m; sourceTree = "<group>"; };
 		19D3025121ABF37C004B0154 /* CodeRobot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeRobot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D3025421ABF37C004B0154 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19D3025521ABF37C004B0154 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -128,6 +131,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19AD230921AE932A00D5C8B6 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				19AD230A21AE941300D5C8B6 /* CRCodeEditor.h */,
+				19AD230B21AE941300D5C8B6 /* CRCodeEditor.m */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
 		19D3024821ABF37B004B0154 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +208,7 @@
 		19D3028C21ABF3BB004B0154 /* CR */ = {
 			isa = PBXGroup;
 			children = (
+				19AD230921AE932A00D5C8B6 /* Editor */,
 				19D3029C21ABF42B004B0154 /* Lazyload */,
 				19D3028D21ABF3BB004B0154 /* SourceEditorExtension.h */,
 				19D3028E21ABF3BB004B0154 /* SourceEditorExtension.m */,
@@ -410,6 +423,7 @@
 				19D3028F21ABF3BB004B0154 /* SourceEditorExtension.m in Sources */,
 				19D3029221ABF3BB004B0154 /* SourceEditorCommand.m in Sources */,
 				19D3029F21ABF473004B0154 /* CRLazyload.m in Sources */,
+				19AD230C21AE941300D5C8B6 /* CRCodeEditor.m in Sources */,
 				196D5E4121AD271300035B98 /* CRTemplateManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,7 +577,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = H6LHP2GZ52;
+				DEVELOPMENT_TEAM = V973TY4SQ9;
 				INFOPLIST_FILE = CodeRobot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -583,7 +597,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = H6LHP2GZ52;
+				DEVELOPMENT_TEAM = V973TY4SQ9;
 				INFOPLIST_FILE = CodeRobot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -672,7 +686,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = H6LHP2GZ52;
+				DEVELOPMENT_TEAM = V973TY4SQ9;
 				INFOPLIST_FILE = CR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -693,7 +707,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = H6LHP2GZ52;
+				DEVELOPMENT_TEAM = V973TY4SQ9;
 				INFOPLIST_FILE = CR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

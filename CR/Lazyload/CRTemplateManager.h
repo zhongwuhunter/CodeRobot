@@ -12,6 +12,12 @@
 
 @interface CRTemplateManager : NSObject
 
+@property (nonatomic, copy) NSMutableDictionary      *editTemplate;
+@property (nonatomic, copy) NSMutableDictionary      *mappingTemplate;
+
+
++ (instancetype)sharedInstance;
+
 + (NSString *)mappingWithClassName:(NSString *)className propertyName:(NSString *)propertyName;
 
 @end

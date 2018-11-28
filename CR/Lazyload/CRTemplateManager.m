@@ -10,7 +10,41 @@
 #import "CRTemplate.h"
 
 
+@interface CRTemplateManager()
+
+
+
+@end
+
+
 @implementation CRTemplateManager
+
+
++ (instancetype)sharedInstance{
+    static CRTemplateManager* instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [CRTemplateManager new];
+        [instance setup];
+    });
+    return instance;
+}
+
+- (void)setup{
+    [self initEditTemplate];
+    
+    self.mappingTemplate = [NSMutableDictionary new];
+}
+
+
+- (void)initEditTemplate{
+    self.editTemplate = [NSMutableDictionary new];
+    NSString *str1 = CROC_Edit_BUN;
+    NSString *str2 = CROC_Edit_BUN_Value;
+    [self.editTemplate setValue:str2 forKey:str1];
+    
+}
+
 
 + (NSString *)mappingWithClassName:(NSString *)className propertyName:(NSString *)propertyName{
     
@@ -32,6 +66,32 @@
     tmplString = [tmplString stringByReplacingOccurrencesOfString:@"className" withString:className];
     return tmplString;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

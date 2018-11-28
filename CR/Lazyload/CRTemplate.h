@@ -104,3 +104,14 @@
 
 
 
+#pragma mark 插入的代码
+
+#define CROC_Edit_BUN @"bun"
+#define CROC_Edit_BUN_Value @"\
+[[NSBundle mainBundle] pathForResource:<#(nullable NSString *)#> ofType:<#(nullable NSString *)#>];"
+
+
+
+
+
+

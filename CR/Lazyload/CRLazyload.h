@@ -11,7 +11,7 @@
 
 @interface CRLazyload : NSObject
 
-+ (void)addLazyCodeWithInvocation:(XCSourceEditorCommandInvocation *)invocation;
++ (BOOL)addLazyCodeWithInvocation:(XCSourceEditorCommandInvocation *)invocation;
 
 
 

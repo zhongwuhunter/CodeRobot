@@ -10,6 +10,7 @@
 		19124E6E21ACE374001021E3 /* NSString+Categories+CR.m in Sources */ = {isa = PBXBuildFile; fileRef = 19124E6D21ACE374001021E3 /* NSString+Categories+CR.m */; };
 		196D5E4121AD271300035B98 /* CRTemplateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 196D5E4021AD271300035B98 /* CRTemplateManager.m */; };
 		19AD230C21AE941300D5C8B6 /* CRCodeEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 19AD230B21AE941300D5C8B6 /* CRCodeEditor.m */; };
+		19B8907921AF8E7A00D08E35 /* CRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B8907821AF8E7A00D08E35 /* CRManager.m */; };
 		19D3025621ABF37C004B0154 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D3025521ABF37C004B0154 /* AppDelegate.m */; };
 		19D3025921ABF37C004B0154 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D3025821ABF37C004B0154 /* ViewController.m */; };
 		19D3025B21ABF37C004B0154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19D3025A21ABF37C004B0154 /* Assets.xcassets */; };
@@ -70,6 +71,8 @@
 		196D5E4021AD271300035B98 /* CRTemplateManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRTemplateManager.m; sourceTree = "<group>"; };
 		19AD230A21AE941300D5C8B6 /* CRCodeEditor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRCodeEditor.h; sourceTree = "<group>"; };
 		19AD230B21AE941300D5C8B6 /* CRCodeEditor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRCodeEditor.m; sourceTree = "<group>"; };
+		19B8907721AF8E7A00D08E35 /* CRManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRManager.h; sourceTree = "<group>"; };
+		19B8907821AF8E7A00D08E35 /* CRManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRManager.m; sourceTree = "<group>"; };
 		19D3025121ABF37C004B0154 /* CodeRobot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeRobot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D3025421ABF37C004B0154 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19D3025521ABF37C004B0154 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -140,6 +143,18 @@
 			path = Editor;
 			sourceTree = "<group>";
 		};
+		19B8907621AF8E4E00D08E35 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				196D5E3F21AD271300035B98 /* CRTemplateManager.h */,
+				196D5E4021AD271300035B98 /* CRTemplateManager.m */,
+				19124E6C21ACE374001021E3 /* NSString+Categories+CR.h */,
+				19124E6D21ACE374001021E3 /* NSString+Categories+CR.m */,
+				196D5E3C21AD256D00035B98 /* CRTemplate.h */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
 		19D3024821ABF37B004B0154 = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +223,9 @@
 		19D3028C21ABF3BB004B0154 /* CR */ = {
 			isa = PBXGroup;
 			children = (
+				19B8907721AF8E7A00D08E35 /* CRManager.h */,
+				19B8907821AF8E7A00D08E35 /* CRManager.m */,
+				19B8907621AF8E4E00D08E35 /* Template */,
 				19AD230921AE932A00D5C8B6 /* Editor */,
 				19D3029C21ABF42B004B0154 /* Lazyload */,
 				19D3028D21ABF3BB004B0154 /* SourceEditorExtension.h */,
@@ -225,11 +243,6 @@
 			children = (
 				19D3029D21ABF473004B0154 /* CRLazyload.h */,
 				19D3029E21ABF473004B0154 /* CRLazyload.m */,
-				19124E6C21ACE374001021E3 /* NSString+Categories+CR.h */,
-				19124E6D21ACE374001021E3 /* NSString+Categories+CR.m */,
-				196D5E3C21AD256D00035B98 /* CRTemplate.h */,
-				196D5E3F21AD271300035B98 /* CRTemplateManager.h */,
-				196D5E4021AD271300035B98 /* CRTemplateManager.m */,
 			);
 			path = Lazyload;
 			sourceTree = "<group>";
@@ -424,6 +437,7 @@
 				19D3029221ABF3BB004B0154 /* SourceEditorCommand.m in Sources */,
 				19D3029F21ABF473004B0154 /* CRLazyload.m in Sources */,
 				19AD230C21AE941300D5C8B6 /* CRCodeEditor.m in Sources */,
+				19B8907921AF8E7A00D08E35 /* CRManager.m in Sources */,
 				196D5E4121AD271300035B98 /* CRTemplateManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

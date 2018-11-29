@@ -7,17 +7,13 @@
 //
 
 #import "SourceEditorCommand.h"
-#import "CRLazyload.h"
-#import "CRCodeEditor.h"
+#import "CRManager.h"
 
 @implementation SourceEditorCommand
 
-- (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler
-{
-//    [CRLazyload addLazyCodeWithInvocation:invocation];
-    
-    [[CRCodeEditor sharedInstance] handleInvocation:invocation];
-    
+- (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation
+                   completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler{
+    [CRManager handleInvocation:invocation];
     completionHandler(nil);
 }
 

@@ -18,7 +18,7 @@
         _propertyName = label;\n\
     }\n\
     return _propertyName;\n\
-}\n"
+}"
 
 
 
@@ -31,7 +31,7 @@
         _propertyName = imageView;\n\
     }\n\
     return _propertyName;\n\
-}\n"
+}"
 
 
 
@@ -56,7 +56,7 @@
         _propertyName = button;\n\
     }\n\
     return _propertyName;\n\
-}\n"
+}"
 
 
 
@@ -75,7 +75,7 @@
         _propertyName = aTableView;\n\
     }\n\
     return _propertyName;\n\
-}\n"
+}"
 
 
 #define CROC_Template_UITextField @"\
@@ -91,7 +91,7 @@
         _propertyName = atextField;\n\
     }\n\
     return _propertyName;\n\
-}\n"
+}"
 
 
 #define CROC_Template_Other @"\
@@ -100,15 +100,55 @@
         _propertyName = [className new];\n\
     }\n\
     return _propertyName;\n\
-}\n"
+}"
 
 
 
 #pragma mark 插入的代码
 
-#define CROC_Edit_BUN @"bun"
-#define CROC_Edit_BUN_Value @"\
+#define CROC_Edit_Bun @"bun"
+#define CROC_Edit_Bun_Value @"\
 [[NSBundle mainBundle] pathForResource:<#(nullable NSString *)#> ofType:<#(nullable NSString *)#>];"
+
+
+
+
+
+#define CROC_Edit_Damq @"damq"
+#define CROC_Edit_Damq_Value @"\
+dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(<#delayInSeconds#> * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{\n\
+     <#code to be executed after a specified delay#>\n\
+});"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

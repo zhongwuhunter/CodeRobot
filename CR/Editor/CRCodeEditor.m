@@ -20,8 +20,9 @@
     return instance;
 }
 
-- (void)handleInvocation:(XCSourceEditorCommandInvocation *)invocation{
-    
+
+
+- (void)handleInvocation:(XCSourceEditorCommandInvocation *)invocation{    
     XCSourceTextRange *selection = invocation.buffer.selections.firstObject;
     NSMutableArray* lines = invocation.buffer.lines;
     NSInteger startLine = selection.start.line;
@@ -35,10 +36,26 @@
         if ( endColumn-matchLength >= 0 ) {
             NSRange targetRange = NSMakeRange(endColumn-matchLength, matchLength);
             NSString *key = [originalLine substringWithRange:targetRange];
-            NSString *targetString = [[CRTemplateManager sharedInstance].editTemplate valueForKey:key];
-            if (targetString.length > 0) {
-                lines[startLine] = [originalLine stringByReplacingOccurrencesOfString:key withString:targetString options:NSBackwardsSearch range:targetRange];
-                NSLog(@"%@", targetString);
+            //映射的模板代码
+            NSString *templateString = [[CRTemplateManager sharedInstance].editTemplate valueForKey:key];
+            
+            if (templateString.length > 0) {
+                NSArray *templateArray = [templateString componentsSeparatedByString:@"\n"];
+                //替换模板第一行代码
+                lines[startLine] = [originalLine stringByReplacingOccurrencesOfString:key withString:templateArray[0] options:NSBackwardsSearch range:targetRange];
+                
+                //偏移空格是为了处理多行代码映射的时候，格式化问题
+                NSInteger offsetSpace = [originalLine rangeOfString:key].location;
+                NSString *space = @"";
+                while (offsetSpace > 0) {
+                    space = [space stringByAppendingString:@" "];
+                    offsetSpace --;
+                }
+                
+                for (NSInteger j=1; j<templateArray.count; j++) {
+                    NSString *insertLine = [NSString stringWithFormat:@"%@%@", space, templateArray[j]];
+                    [lines insertObject:insertLine atIndex:startLine+j];
+                }
                 break;
             }
         }

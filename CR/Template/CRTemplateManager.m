@@ -39,8 +39,22 @@
 
 - (void)initEditTemplate{
     self.editTemplate = [NSMutableDictionary new];
-    [self.editTemplate setValue:CROC_Edit_Bun_Value forKey:CROC_Edit_Bun];
-    [self.editTemplate setValue:CROC_Edit_Damq_Value forKey:CROC_Edit_Damq];
+    
+    //自定义UI
+    [self.editTemplate setValue:CROC_Edit_Custom_toast_Value forKey:CROC_Edit_Custom_toast];
+    [self.editTemplate setValue:CROC_Edit_Custom_NmColor_Value forKey:CROC_Edit_Custom_NmColor];
+    
+    //RAC
+    [self.editTemplate setValue:CROC_Edit_Rac_Cmd_Value forKey:CROC_Edit_Rac_Cmd];
+    [self.editTemplate setValue:CROC_Edit_Rac_Sig_Value forKey:CROC_Edit_Rac_Sig];
+    [self.editTemplate setValue:CROC_Edit_Rac_Obs_Value forKey:CROC_Edit_Rac_Obs];
+    [self.editTemplate setValue:CROC_Edit_Rac_Robcl_Value forKey:CROC_Edit_Rac_Robcl];
+    [self.editTemplate setValue:CROC_Edit_Rac_Robce_Value forKey:CROC_Edit_Rac_Robce];
+    [self.editTemplate setValue:CROC_Edit_Rac_Db_Value forKey:CROC_Edit_Rac_Db];
+    
+    //tableview
+    [self.editTemplate setValue:CROC_Edit_Delegate_Dtab_Value forKey:CROC_Edit_Delegate_Dtab];
+    
     
 }
 

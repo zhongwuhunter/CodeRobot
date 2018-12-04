@@ -103,14 +103,29 @@
 }"
 
 
+#pragma mark 自定义UI
 
-#pragma mark 插入的代码
+#define CROC_Edit_Custom_toast @"tot"
+#define CROC_Edit_Custom_toast_Value @"\
+[QHUIBuilder toast:error.domain];"
+
+
+#define CROC_Edit_Custom_NmColor @"cor"
+#define CROC_Edit_Custom_NmColor_Value @"\
+[UIColor nm_colorFromRGB:<#(long)#>]"
+
+
+// push,  mj插件  cell自定义 view初始化模板
+
+#define CROC_Edit_AttributedString @"atts"
+#define CROC_Edit_AttributedString_Value @"\
+NSDictionary *attributes = @{NSFontAttributeName:[UIFont nm_FontOfSize:<#(CGFloat)#>], NSForegroundColorAttributeName:[UIColor nm_colorFromRGB:<#(long)#>]};\n\
+NSMutableAttributedString *attText = [[NSMutableAttributedString alloc] initWithString:<#(nonnull NSString *)#> attributes:attributes];"
+
 
 #define CROC_Edit_Bun @"bun"
 #define CROC_Edit_Bun_Value @"\
 [[NSBundle mainBundle] pathForResource:<#(nullable NSString *)#> ofType:<#(nullable NSString *)#>];"
-
-
 
 
 
@@ -122,9 +137,70 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(<#delayInSeconds#> * N
 
 
 
+#pragma mark ReactiveCocoa
+
+//创建command
+#define CROC_Edit_Rac_Cmd @"rcmd"
+#define CROC_Edit_Rac_Cmd_Value @"\
+[[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {\n\
+\n\
+    return RACSignal.empty;\n\
+}];"
+
+//新信号
+#define CROC_Edit_Rac_Sig @"rsig"
+#define CROC_Edit_Rac_Sig_Value @"\
+- (RACSignal *)<#type#>{\n\
+    return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {\n\
+        \n\
+        return nil;\n\
+    }] deliverOnMainThread] ;\n\
+}"
+
+//普通订阅
+#define CROC_Edit_Rac_Obs @"robs"
+#define CROC_Edit_Rac_Obs_Value @"\
+[RACObserve(<#TARGET#>, <#KEYPATH#>) subscribeNext:^(id x) {\n\
+    @strongify(self);\n\
+}];"
+
+//command 订阅
+#define CROC_Edit_Rac_Robcl @"robcl"
+#define CROC_Edit_Rac_Robcl_Value @"\
+[.executionSignals switchToLatest subscribeNext:^(id x) {\n\
+    @strongify(self);\n\
+}];"
+
+//command 错误订阅
+#define CROC_Edit_Rac_Robce @"robce"
+#define CROC_Edit_Rac_Robce_Value @"\
+[.errors subscribeNext:^(NSError *error) {\n\
+    @strongify(self);\n\
+}];"
 
 
+//双向绑定
+#define CROC_Edit_Rac_Db @"rdb"
+#define CROC_Edit_Rac_Db_Value @"\
+RAC(<#TARGET#>, <#KEYPATH#>) = RACObserve(self, <#KEYPATH#>)"
 
+
+#pragma mark Delegate
+
+#define CROC_Edit_Delegate_Dtab @"dtab"
+#define CROC_Edit_Delegate_Dtab_Value @"\
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{\n\
+    return 0;\n\
+}\n\
+\n\
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{\n\
+    return 36;\n\
+}\n\
+\n\
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {\n\
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[UITableViewCell description]];\n\
+    return cell;\n\
+}"
 
 
 

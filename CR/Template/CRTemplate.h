@@ -105,12 +105,12 @@
 
 #pragma mark 自定义UI
 
-#define CROC_Edit_Custom_toast @"tot"
+#define CROC_Edit_Custom_toast @"toa"
 #define CROC_Edit_Custom_toast_Value @"\
 [QHUIBuilder toast:error.domain];"
 
 
-#define CROC_Edit_Custom_NmColor @"cor"
+#define CROC_Edit_Custom_NmColor @"col"
 #define CROC_Edit_Custom_NmColor_Value @"\
 [UIColor nm_colorFromRGB:<#(long)#>]"
 
@@ -140,7 +140,7 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(<#delayInSeconds#> * N
 #pragma mark ReactiveCocoa
 
 //创建command
-#define CROC_Edit_Rac_Cmd @"rcmd"
+#define CROC_Edit_Rac_Cmd @"crtcmd"
 #define CROC_Edit_Rac_Cmd_Value @"\
 [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {\n\
 \n\
@@ -148,7 +148,7 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(<#delayInSeconds#> * N
 }];"
 
 //新信号
-#define CROC_Edit_Rac_Sig @"rsig"
+#define CROC_Edit_Rac_Sig @"crtsig"
 #define CROC_Edit_Rac_Sig_Value @"\
 - (RACSignal *)<#type#>{\n\
     return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {\n\
@@ -158,21 +158,21 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(<#delayInSeconds#> * N
 }"
 
 //普通订阅
-#define CROC_Edit_Rac_Obs @"robs"
+#define CROC_Edit_Rac_Obs @"sub"
 #define CROC_Edit_Rac_Obs_Value @"\
 [RACObserve(<#TARGET#>, <#KEYPATH#>) subscribeNext:^(id x) {\n\
     @strongify(self);\n\
 }];"
 
 //command 订阅
-#define CROC_Edit_Rac_Robcl @"robcl"
+#define CROC_Edit_Rac_Robcl @"cmdsublatest"
 #define CROC_Edit_Rac_Robcl_Value @"\
 [.executionSignals switchToLatest subscribeNext:^(id x) {\n\
     @strongify(self);\n\
 }];"
 
 //command 错误订阅
-#define CROC_Edit_Rac_Robce @"robce"
+#define CROC_Edit_Rac_Robce @"cmdsuberror"
 #define CROC_Edit_Rac_Robce_Value @"\
 [.errors subscribeNext:^(NSError *error) {\n\
     @strongify(self);\n\
@@ -180,14 +180,39 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(<#delayInSeconds#> * N
 
 
 //双向绑定
-#define CROC_Edit_Rac_Db @"rdb"
+#define CROC_Edit_Rac_Db @"racdb"
 #define CROC_Edit_Rac_Db_Value @"\
 RAC(<#TARGET#>, <#KEYPATH#>) = RACObserve(self, <#KEYPATH#>)"
 
+#define CROC_Edit_Rac_addobser @"addobser"
+#define CROC_Edit_Rac_addobser_Value @"\
+[[[[NSNotificationCenter defaultCenter] rac_addObserverForName:nil object:nil] takeUntil:self.rac_willDeallocSignal] subscribeNext:^(id x) {\n\
+    @strongify(self);\n\
+}];"
+
+
+#pragma mark 布局
+
+#define CROC_Edit_Rac_Msy @"msy"
+#define CROC_Edit_Rac_Msy_Value @"\
+[<#type#> mas_makeConstraints:^(MASConstraintMaker *make) {\n\
+    make.left.equalTo(<#type#>);\n\
+    make.right.equalTo(<#type#>);\n\
+    make.top.equalTo(<#type#>);\n\
+    make.bottom.equalTo(<#type#>);\n\
+    make.width.equalTo(<#type#>);\n\
+    make.height.equalTo(<#type#>);\n\
+}];"
+
+
+//关闭全局键盘
+//[[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+//关闭当前页键盘
+//[<#view#> endEditing:YES]
 
 #pragma mark Delegate
 
-#define CROC_Edit_Delegate_Dtab @"dtab"
+#define CROC_Edit_Delegate_Dtab @"tabdelegate"
 #define CROC_Edit_Delegate_Dtab_Value @"\
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{\n\
     return 0;\n\

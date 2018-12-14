@@ -31,7 +31,7 @@
     
     NSString* originalLine = lines[startLine];
     //匹配输入词的最大长度 例如 bun, dsay等
-    int matchLength = 7;
+    int matchLength = 15;
     while (matchLength >= 1) {
         if ( endColumn-matchLength >= 0 ) {
             NSRange targetRange = NSMakeRange(endColumn-matchLength, matchLength);
